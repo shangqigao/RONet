@@ -1,0 +1,8 @@
+numpy==1.15.4
+tensorflow-gpu==1.10.0
+opencv-python==4.4.0
+tqdm==4.48.2
+scikit-image==0.17.1
+Pillow==7.2.0
+cudatoolkit==8.0
+cudnn==7.1.3
