@@ -192,7 +192,7 @@ sh demo.sh
 ## Citation
 If our work is useful in your research or publication, please cite the work:
 
-[1] Shangqi Gao, and Xiahai Zhuang, "**Rank-One Network: An Effective Framework for Image Restoration**", TPAMI, 2020. [[PDF]]() [[arXiv]]()
+[1] Shangqi Gao, and Xiahai Zhuang, "**Rank-One Network: An Effective Framework for Image Restoration**", submitted to TPAMI, 2020. [[PDF]]() [[arXiv]]()
 ```
 @Article{ronet/tpami/2020,
 	title={Rank-One Network: An Effective Framework for Image Restoration},
