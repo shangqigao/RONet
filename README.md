@@ -51,11 +51,11 @@ We provided the pre-trained model ```RONet-NF```, please unzip it to the folder 
 |-----|-------|----------|--------|--------|
 |RONet-NF|x4  |5.0M      |[link](https://pan.baidu.com/s/1FxoRxb51lpLluYpNsshrkQ)[0m12]|[link](https://1drv.ms/u/s!AuJaQmQJN4arhALu6f7MyZ5yWg3p)|
 
-Besides, we provided the script ```demo.sh``` for test, please uncomment the following command in ```src/demo.sh```,
+Besides, we provided the script ```demo.sh``` for test, please uncomment the following code in ```src/demo.sh```,
 ```bash
 python RONet_test.py --dataset Set5 --input_data_dir ../data/Test/benchmark --task BiSR --upscale 4 --net_type net_sr --depth_RODec 3 --depth_RecROs 3 --depth_RecRes 6 --depth_RecFus 3 --out_channel 3 --RONet_checkpoint ../models/RONet-NF/model --save_dir ../results --GPU_ids 0
 ```
-, and test ```RONet-NF``` on Set5 as follow,
+, and test ```RONet-NF``` on Set5 as follows,
 ```bash
 cd src
 sh demo.sh
@@ -68,7 +68,7 @@ Following Track2, realistic image SR of NTIRE2018, we used [DIV2K_valid_LR_mild]
 |-----|-------|----------|--------|--------|
 |RONet-R|x4   |5.0M      |[link](https://pan.baidu.com/s/14nXgdApeh6lYHv9H6mhQ1g) [r5d9]|[link](https://1drv.ms/u/s!AuJaQmQJN4arhAFQlRPf4ZFeWoRp)|
 
-Besides, we provided the script ```demo.sh``` for test, please uncomment the following command in ```src/demo.sh```,
+Besides, we provided the script ```demo.sh``` for test, please uncomment the following code in ```src/demo.sh```,
 ```bash
 python RONet_test.py --dataset DIV2K_mild --input_data_dir ../data/Test/benchmark --task ReSR --upscale 4 --net_type net_sr --depth_RODec 3 --depth_RecROs 3 --depth_RecRes 6 --depth_RecFus 3 --out_channel 3 --RONet_checkpoint ../models/RONet-R/model --save_dir ../results --ensemble --GPU_ids 0
 ```
@@ -92,18 +92,18 @@ We provided the pre-trained model ```RONet-G_sigmaxx```, where ```xx```denotes t
 |RONet-G_sigma35|35   |2.01M      |[link](https://pan.baidu.com/s/1MZEgwOeoBgt_ekOI8gTu7w)[iw2w]|[link](https://1drv.ms/u/s!AuJaQmQJN4arhATlEiqN71n1beKY)|
 |RONet-G_sigma50|50   |2.01M      |[link](https://pan.baidu.com/s/13xlNW0DXqSVM9Hatf30rWw)[xw55]|[link](https://1drv.ms/u/s!AuJaQmQJN4arhAOcn5QoptVmxmdH)|
 
-Besides, we provided the script ```demo.sh``` for test, please uncomment the following command in ```src/demo.sh```,
+Besides, we provided the script ```demo.sh``` for test, please uncomment the following code in ```src/demo.sh```,
 ```bash
 python RONet_test.py --dataset RNI6 --input_data_dir ../data/Test/benchmark --task DEN --net_type net_den --deep_scale 48 --depth_RODec 1 --depth_RecROs 3 --depth_RecRes 6 --depth_RecFus 3 --out_channel 1 --RONet_checkpoint ../logs/RONet-G_sigma50/model --save_dir ../results --sigma 50 --GPU_ids 0
 ```
-, and test ```RONet-G``` on RNI6 with the noise levle of 50, as follow,
+, and test ```RONet-G``` on RNI6 with the noise levle of 50, as follows,
 ```bash
 cd src
 sh demo.sh
 ```
 
 #### Color image denoising
-We test our models with three widely used datasets:
+We tested our models with three widely used datasets:
 - [CBSD68-Roth et al. CVPR 2005](https://www2.eecs.berkeley.edu/Research/Projects/CS/vision/grouping/resources.html)
 - [Kodak24-Franzen et al. 1999](http://r0k.us/graphics/kodak)
 - [McMaster-Zhang et al. 2011](http://www4.comp.polyu.edu.hk/~cslzhang/CDM_Dataset.htm)
@@ -114,11 +114,11 @@ We provided the pre-trained model ```RONet-C```, please unzip it to the folder `
 |-----|-------|----------|--------|--------|
 |RONet-C|[0, 75]  |2.03M      |[link](https://pan.baidu.com/s/1vthx3oV13dKKibhorI35pA)[45iv]|[link](https://1drv.ms/u/s!AuJaQmQJN4arhAgmCbtwawdnN7Mt)|
 
-Besides, we provided the script ```demo.sh``` for test, please uncomment the following command in ```src/demo.sh```,
+Besides, we provided the script ```demo.sh``` for test, please uncomment the following code in ```src/demo.sh```,
 ```bash
 python RONet_test.py --dataset CBSD68 --input_data_dir ../data/Test/benchmark --task DEN --net_type net_den --deep_scale 16 --depth_RODec 1 --depth_RecROs 3 --depth_RecRes 6 --depth_RecFus 3 --out_channel 3 --RONet_checkpoint ../models/RONet-C/model --save_dir ../results --sigma 50 --GPU_ids 0
 ```
-, and test ```RONet-C``` on CBSD68 with the noise levle of 50, as follow,
+, and test ```RONet-C``` on CBSD68 with the noise levle of 50, as follows,
 ```bash
 cd src
 sh demo.sh
@@ -130,11 +130,11 @@ Besides, please download the checkpoint of VGG19 and put ```vgg_19.ckpt``` to th
 #### Pre-train RODec
 - Dataset: [DIV2K_train_HR](http://data.vision.ee.ethz.ch/cvl/DIV2K/DIV2K_train_HR.zip)
 - Strategy: unsupervised training
-- Demo: please uncomment the follow line in the provided script (`src/demo.sh`). 
+- Demo: please uncomment the following code in the provided script (`src/demo.sh`). 
 ```bash
 nohup python -u RODec_train.py --train_mode unsupervised --out_channel 3 --input_data_dir ../data/Train --augment --log_dir ../logs/UROD-C --GPU_ids 0 >out &
 ```
-Then, please train RODec for color mode following the commands:
+Then, please train RODec for color mode using the following code:
 ```bash
 cd scr
 sh demo.sh
@@ -150,25 +150,25 @@ Besides, we provided pre-trained RODec models for grayscale and color images:
 - Noise-free image super-resolution
 	- Dataset: [DIV2K_train_LR_bicubic_X4](http://data.vision.ee.ethz.ch/cvl/DIV2K/DIV2K_train_LR_bicubic_X4.zip)
 	- Strategy: supervised learning
-	- Demo: please uncomment the following line in the provided script (`src/demo.sh`). 
+	- Demo: please uncomment the following code in the provided script (`src/demo.sh`). 
 ```bash
 nohup python -u RONet_train.py --input_data_dir ../data/Train --augment --task BiSR --upscale 4 --net_type net_sr --depth_RODec 3 --depth_RecROs 3 --depth_RecRes 6 --depth_RecFus 3 --out_channel 3 --vgg_checkpoint ../models/vgg_19.ckpt --RODec_checkpoint ../models/UROD-C/model --log_dir ../logs/RONet-NF --GPU_ids 0 >out &
 ```
-Then, you can train a RONet-NF model following the commands:
+Then, you can train a RONet-NF model using the following code:
 ```bash
 cd scr
 sh demo.sh
 ```
-You can check the logged information via ```vim out```.
+You can check logging information via ```vim out```.
 
 - Realistic image super-resolution
 	- Dataset: [DIV2K_train_LR_mild](http://data.vision.ee.ethz.ch/cvl/DIV2K/DIV2K_train_LR_mild.zip)
 	- Strategy: supervised learning
-	- Demo: please uncomment the following lines in the provided script (`src/demo.sh`). 
+	- Demo: please uncomment the following code in the provided script (`src/demo.sh`). 
 ```bash
 nohup python -u RONet_train.py --input_data_dir ../data/Train --augment --task ReSR --upscale 4 --net_type net_sr --depth_RODec 3 --depth_RecROs 3 --depth_RecRes 6 --depth_RecFus 3 --out_channel 3 --vgg_checkpoint ../models/vgg_19.ckpt --RODec_checkpoint ../models/UROD-C/model --log_dir ../logs/RONet-R --GPU_ids 0 >out &
 ```
-Then, you can train a RONet-R model following the commands:
+Then, you can train a RONet-R model using the following code:
 ```bash
 cd scr
 sh demo.sh
@@ -177,11 +177,11 @@ sh demo.sh
 - Gray-scale image denoising
 	- Dataset: [DIV2K_train_HR](http://data.vision.ee.ethz.ch/cvl/DIV2K/DIV2K_train_HR.zip) 
 	- Strategy: supervised learning
-	- Demo: please uncomment the following line in the provided script (`src/demo.sh`). 
+	- Demo: please uncomment the following code in the provided script (`src/demo.sh`). 
 ```bash
 nohup python -u RONet_train.py --input_data_dir ../data/Train --augment --task DEN --net_type net_den --deep_scale 48 --depth_RODec 1 --depth_RecROs 3 --depth_RecRes 6 --depth_RecFus 3 --out_channel 1 --RODec_checkpoint ../models/UROD-G/model --sigma 50 --log_dir ../logs/RONet-G_sigma50 --GPU_ids 0 >out &
 ```
-Then, you can train a RODec-G model for the noise level of 50 following the commands:
+Then, you can train a RODec-G model for the noise level of 50  using the following code:
 ```bash
 cd scr
 sh demo.sh
@@ -190,11 +190,11 @@ sh demo.sh
 - Color image denoising
 	- Dataset: [DIV2K_train_HR](http://data.vision.ee.ethz.ch/cvl/DIV2K/DIV2K_train_HR.zip) 
 	- Strategy: supervised learning
-	- Demo: please uncomment the follow line in the provided script (`src/demo.sh`). 
+	- Demo: please uncomment the following code in the provided script (`src/demo.sh`). 
 ```bash
 nohup python -u RONet_train.py --input_data_dir ../data/Train --augment --task DEN --net_type net_den --deep_scale 16 --depth_RODec 1 --depth_RecROs 3 --depth_RecRes 6 --depth_RecFus 3 --out_channel 3 --sigma 75 --range --RODec_checkpoint ../models/UROD-C/model --log_dir ../models/RONet-C --GPU_ids 0 >out &
 ```
-Then, you can train a RODec-C model for the noise level of 50 following the commands:
+Then, you can train a RODec-C model for the noise level of 50 using the following code:
 ```bash
 cd scr
 sh demo.sh
@@ -217,4 +217,4 @@ If our work is useful in your research or publication, please cite the work:
 }
 ```
 
-Please contact us via [shangqigao@gmail.com]() or [zxh@fudan.edu.cn](), if you have any questions.
+Don't hesitate to contact us via [shqgao@163.com]() or [zxh@fudan.edu.cn](), if you have any questions.
