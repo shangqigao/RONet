@@ -126,7 +126,7 @@ sh demo.sh
 
 ## How to train RONet
 We adopted a two-step strategy to train our RONet, i.e., (1) pretrained the RO decomposition network (RODec), and (2) fixed RODec and trained the RO reconstruction network (RORec). You can download the training datasets from the [official website](https://data.vision.ee.ethz.ch/cvl/DIV2K/), and put them to the folder ```data/Train```.
-Besides, please download the checkpoint of VGG19 and put ```vgg_19.ckpt``` to the folder ```models```
+Besides, please download the checkpoint of [VGG19](https://github.com/tensorflow/models/tree/master/research/slim) and put ```vgg_19.ckpt``` to the folder ```models```
 #### Pre-train RODec
 - Dataset: [DIV2K_train_HR](http://data.vision.ee.ethz.ch/cvl/DIV2K/DIV2K_train_HR.zip)
 - Strategy: unsupervised training
