@@ -1,6 +1,10 @@
---data
-    |--Test
-    |    |--benchmark
-    |
-    |--Train
-         |--DIV2K
+### Structure
+
+```
+data
+  |--Test
+  |    |--benchmark
+  |
+  |--Train
+       |--DIV2K
+```
