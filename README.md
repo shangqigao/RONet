@@ -3,6 +3,7 @@ The official implementation of "**Rank-One Network: An Effective Framework for I
 
 ![RONet logo](imgs/RONet_logo.png)
 
+## Content
 * [Dependencies](#dependencies)
 * [Quick test](#quick-test)
 	* [Noise-free image super-resolution](#noise-free-image-super-resolution)
@@ -203,7 +204,7 @@ sh demo.sh
 ## Citation
 If our work is useful in your research or publication, please cite the work:
 
-[1] Shangqi Gao, and Xiahai Zhuang, "**Rank-One Network: An Effective Framework for Image Restoration**", submitted to TPAMI, 2020. [[arXiv]](https://arxiv.org/abs/2011.12610)
+[1] Shangqi Gao, and Xiahai Zhuang, "**Rank-One Network: An Effective Framework for Image Restoration**", accepted to TPAMI, 2020. [[arXiv]](https://arxiv.org/abs/2011.12610)
 ```
 @Article{ronet/tpami/2020,
 	title={Rank-One Network: An Effective Framework for Image Restoration},
