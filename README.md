@@ -95,7 +95,7 @@ We provided the pre-trained model ```RONet-G_sigmaxx```, where ```xx```denotes t
 
 Besides, we provided the script ```demo.sh``` for test, please uncomment the following code in ```src/demo.sh```,
 ```bash
-python RONet_test.py --dataset RNI6 --input_data_dir ../data/Test/benchmark --task DEN --net_type net_den --deep_scale 48 --depth_RODec 1 --depth_RecROs 3 --depth_RecRes 6 --depth_RecFus 3 --out_channel 1 --RONet_checkpoint ../logs/RONet-G_sigma50/model --save_dir ../results --sigma 50 --GPU_ids 0
+python RONet_test.py --dataset RNI6 --input_data_dir ../data/Test/benchmark --task DEN --net_type net_den --deep_scale 48 --depth_RODec 1 --depth_RecROs 3 --depth_RecRes 6 --depth_RecFus 3 --out_channel 1 --RONet_checkpoint ../models/RONet-G_sigma50/model --save_dir ../results --sigma 50 --GPU_ids 0
 ```
 , and test ```RONet-G``` on RNI6 with the noise levle of 50, as follows,
 ```bash
