@@ -204,13 +204,13 @@ sh demo.sh
 ## Citation
 If our work is useful in your research or publication, please cite the work:
 
-[1] Shangqi Gao, and Xiahai Zhuang, "**Rank-One Network: An Effective Framework for Image Restoration**", accepted to TPAMI, 2020. [[arXiv]](https://arxiv.org/abs/2011.12610)
+[1] Shangqi Gao, and Xiahai Zhuang, "**Rank-One Network: An Effective Framework for Image Restoration**", TPAMI, 2020. [[arXiv]](https://arxiv.org/abs/2011.12610) [[TPAMI]](https://ieeexplore.ieee.org/document/9303377)
 ```
 @Article{ronet/tpami/2020,
 	title={Rank-One Network: An Effective Framework for Image Restoration},
 	author={S. {Gao} and X. {Zhuang}},
     journal={IEEE Transactions on Pattern Analysis and Machine Intelligence},
-    doi={xxx},
+    doi={10.1109/TPAMI.2020.3046476},
     number=xxx,
     volumn=xxx,
     year=2020,
